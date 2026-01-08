@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Marvel vs Thanos</title>
+  <link rel="stylesheet" href="gamestyle.css" />
+</head>
+<body>
+  <div id="char-select-screen">
+      <h1>Choose your Hero!</h1>
+      <div class="selection-container">
+          <div class="p-select" id="p1-select">
+              <h2>Player 1</h2>
+              <p>w a s d + f (Shoot) + s (Block)</p>
+              <div class="options">
+                  <button onclick="select_char(1, 'thor')">Thor</button>
+                  <button onclick="select_char(1, 'cap')">Captain America</button>
+                  <button onclick="select_char(1, 'ironman')">Iron Man</button>
+              </div>
+              <div class="status" id="p1-status">Pick your character </div>
+          </div>
+          <div class="p-select" id="p2-select">
+              <h2>Player 2</h2>
+              <p>j i k l + h (Shoot) + k (Block)</p>
+              <div class="options">
+                  <button onclick="select_char(2, 'thanos')">Thanos</button>
+              </div>
+              <div class="status" id="p2-status">No choice for you lol <br> Pick Thanos</div>
+          </div>
+      </div>
+      <button id="start-btn" disabled onclick="start_game()">Fight!</button>
+  </div>
+  <div id="ui-layer" style="display: none;">
+    <div class="stat-box">
+      <h3 id="p1-name">Player 1</h3>
+      <div id="p1-health">Hp: 100</div>
+      <div class="bar-container"><div id="p1-hp-bar" class="hp-bar"></div></div>
+      <div id="p1-shield">Shield: 100</div>
+    </div>
+    <button id="story-btn" onclick="view_story()" style="display:none; pointer-events: auto;">View Story</button>
+    <div class="stat-box">
+      <h3 id="p2-name">Player 2</h3>
+      <div id="p2-health">Hp: 100</div>
+      <div class="bar-container"><div id="p2-hp-bar" class="hp-bar"></div></div>
+      <div id="p2-shield">Shield: 100</div>
+    </div>
+  </div>
+  <canvas id="game-canvas"></canvas>
+  <script src="engine.js"></script>
+  <script src="display.js"></script>
+  <script src="controller.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

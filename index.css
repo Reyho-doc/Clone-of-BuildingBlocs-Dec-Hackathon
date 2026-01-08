@@ -1,0 +1,521 @@
+body {
+	background-color: rgb(255, 255, 255);
+	margin: 0;
+    padding: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Preloader code done with help from AI */
+
+/* body.loading {
+    overflow: hidden;
+} */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+}
+
+#preloader video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#preloader.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* AI used to assist in styling the words */
+
+/* Highlighted phrase */
+.redHighlight {
+    color: #dd2626;
+    font-size: 3rem;
+    font-weight: 900;
+    display: block;
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px rgba(255, 50, 50, 0.5);
+}
+
+.redHighlight2 {
+    color: #dd2626;
+    font-size: 2rem;
+    font-weight: 900;
+    display: block;
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px rgba(255, 50, 50, 0.5);
+}
+
+.timeline-title {
+    font-family: "Bebas Neue", sans-serif;   /* Strong cinematic font */
+    font-size: 48px;
+    letter-spacing: 2px;
+    color: #000000;
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.6),
+        0 0 16px rgba(51, 102, 136, 0.8),
+        0 0 28px rgba(0, 102, 255, 0.7);
+
+    margin-bottom: 20px;
+}
+
+/* Timeline Paragraphs */
+.timeline-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000000;
+
+    max-width: 650px;
+    text-shadow: 0 0 6px rgba(0,0,0,0.6);
+}
+
+.joinButton {
+    margin-top: 30px;
+    background: linear-gradient(135deg, #3366cc, #204d99); /* lighter blue */
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 14px 34px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow:
+        0 0 10px rgba(51, 102, 204, 0.7),
+        0 0 20px rgba(32, 77, 153, 0.5);
+
+    transition: all 0.25s ease;
+}
+
+.joinButton:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow:
+        0 0 15px rgba(51, 153, 255, 1),
+        0 0 30px rgba(32, 102, 204, 0.8);
+    background: linear-gradient(135deg, #4d88ff, #3366cc);
+}
+
+
+/* Below is not done with AI */
+
+.contentText {
+    width: 100%;
+}
+
+/* Header Bar */
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 15px 80px 15px 80px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+a {
+    text-decoration: none !important;
+	
+}
+
+.row {
+    display:flex;
+}
+
+.logoimg {
+    padding-right: 10px;
+    display: inline-block;
+    width: 120px;
+    height: 48px;
+    padding-top: 0;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    text-decoration: none;
+}
+
+li a{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+li a:hover {
+	border-bottom: 2px solid rgb(240, 7, 7);
+	padding-bottom: 2px;
+	transition: 0.1s;
+	transition-timing-function: easy-in-out;
+}
+
+/*Parallex Effect Code*/
+
+.warning {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    color: #ffffff;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.arrows {
+    font-size: 60px;
+}
+
+.videoContainer {
+    height: 300px;
+    padding-bottom: 50px;
+    padding-top: 50px; 
+}
+
+.video {
+    position: fixed;
+    width: 100%;
+    filter: blur(6px);
+    top:0;
+    z-index: -1000;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 500px;
+    padding-top: 100px;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    
+}
+
+.warning h1, h2 {
+    opacity: 0;
+    transform: translateY(20px); 
+    animation: fadeSlideIn 1s forwards;
+}
+
+.warning h1 { 
+    animation-delay: 14.3s; 
+}
+.warning h2 { 
+    animation-delay: 14.5s; 
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contentText h1 {
+    max-width: 100%;
+    width: 100%;
+}
+
+.contentText {
+    margin-bottom:100px;
+}
+
+
+
+/* ALL CODE FOR TIMELINE */
+hr {
+    border: none;
+    height: 5px;          /* thickness */
+    background-color: rgb(28, 8, 180);
+    margin: 0 50px;
+    margin-bottom: 100px;
+}
+
+/* Timeline code css code InfWar */
+
+.InfWar2 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-left: 100px;
+}
+
+.video1:nth-child(1) {
+    width: 500px;
+    height: 200px;
+    left: 50%;
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.video1:nth-child(2) {
+    margin-left: 100px;
+    width: 500px;
+    height: 200px;
+    left: 50%;
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.video1:nth-child(3) {
+    width: 400px;
+    height: 200px;
+    margin-left: 30px;
+    left: 50%;
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.InfWar {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap:40px;
+    margin-bottom: 100px;
+}
+
+
+.textInfWar {
+    padding: 50px;
+    width: 1000px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.textInfWar p {
+    font-size: 22px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+.InfWar video {
+    animation: fadeIn linear;
+    animation-timeline: view();
+    animation-range-start: 50px;
+    animation-range-end: 200px;
+}
+
+.timeline-title,
+.timeline-text {
+    opacity: 0;
+    transform: translateY(20px); 
+    animation: fadeSlideIn 1s forwards;
+    animation-delay: 0.2s; 
+    animation-timeline: view();
+    animation-range-start: 100px;
+    animation-range-end: 400px;
+}
+
+
+.timeline-title { 
+    animation-delay: 0.3s; 
+}
+.timeline-text { 
+    animation-delay: 0.5s; 
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        scale: 0.7; opacity: 0;
+    }
+    to {
+        scale: 1; opacity: 1;
+    }
+}
+}
+
+/* Timeline code css code ThaSnap */
+
+.video2 {
+    width: 500px;
+    left: 50%;
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.ThaSnap {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap:40px;
+    margin-bottom: 100px;
+}
+
+
+.textInfWar {
+    padding: 50px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+.ThaSnap video {
+    
+    animation: fadeIn linear;
+    animation-timeline: view();
+    animation-range-start: 50px;
+    animation-range-end: 200px;
+}
+
+@keyframes fadeIn {
+    from {
+        scale: 0.7; opacity: 0;
+    }
+    to {
+        scale: 1; opacity: 1;
+    }
+}
+}
+
+
+/* Timeline code css code Prep */
+
+.video2 {
+    width: 500px;
+    left: 50%;
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.Prep {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap:40px;
+    margin-bottom: 100px;
+}
+
+
+.textInfWar {
+    padding: 50px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+.Prep img {
+    animation: fadeIn linear;
+    animation-timeline: view();
+    animation-range-start: 50px;
+    animation-range-end: 200px;
+}
+
+@keyframes fadeIn {
+    from {
+        scale: 0.7; opacity: 0;
+    }
+    to {
+        scale: 1; opacity: 1;
+    }
+}
+}
+
+/* Timeline code css code FinalBattle */
+
+.video3 {
+    width: 500px;
+
+    left: 50%;
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.FinalBattle {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap:40px;
+    margin-bottom: 1000px;
+}
+
+
+.textInfWar {
+    padding: 50px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+.FinalBattle video {
+    animation: fadeIn linear;
+    animation-timeline: view();
+    animation-range-start: 50px;
+    animation-range-end: 200px;
+}
+
+@keyframes fadeIn {
+    from {
+        scale: 0.7; opacity: 0;
+    }
+    to {
+        scale: 1; opacity: 1;
+    }
+}
+}
+
+.footer {
+	margin-top: 100px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-left: 50px;
+	padding-right: 50px;
+}

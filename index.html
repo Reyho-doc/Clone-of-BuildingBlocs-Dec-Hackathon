@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <title>Marvel War Timeline</title>
+        <link rel="icon" type="image/x-icon" href="Adobe_Express_-_file.png">
+
+    </head>
+    <body>
+        <div id="preloader">
+            <video id="preloader-video" autoplay muted playsinline>
+                <source src="videos/MarvelIntro.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="header">
+            <nav>
+                <div class="navbar">
+                    <div class="row">
+                        <a class="logo" href="index.html" ><img src="pictures/Marvel_Logo1.png" class="logoimg"> </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><a class="headertext" href="MarvelHeros.html"> Characters </a></li>
+                            <li><a class="headertext" href="game.html"> Save the World </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="videoContainer">
+            <div class="warning">
+                <h1>Are YOU prepared to fight?</h1>
+                <h2>Scroll Down for more</h2>
+                <h1 class="arrows"> &#8595; </h1>
+            </div>
+            <video class="video" autoplay muted loop >
+                <source src="videos/FightingScene2.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div>
+            <div class="content">
+                <div class="contentText">
+                    <h1>The world is in <span class="redHighlight2">MASSIVE</span> trouble</h1>
+
+
+                    <h1>We need you to fight in the final battle, are you  <span class="redHighlight">UP FOR THE TASK?</span> </h1>
+                    <h1>Heres a quick rundown:</h1>
+                </div>
+                
+                <div>
+                    <hr>
+                    <div class="InfWar">
+                        <div class="InfWar2">
+                            <video class="video1" autoplay muted loop >
+                                <source src="videos/IronAmericaB.mp4" type="video/mp4">
+                            </video>
+                            <video class="video1" autoplay muted loop >
+                                <source src="videos/FightingScene3.mp4" type="video/mp4">
+                            </video>
+                            <video class="video1" autoplay muted loop >
+                                <source src="videos/FightingScene4THor.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="textInfWar">
+                            <h1 class="timeline-title">The fight for the final stone</h1>
+                            <p class="timeline-text">With Vision holding the final stone, the Avengers and Wakandan army assemble to protect him while Shuri works to remove it safely. Thanos' Outriders attack, but Captain America, Black Panther, Okoye, and the Dora Milaje hold the line as Thor arrives with Stormbreaker to cut through the enemy.</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div>
+                    <hr>
+                    <div class="ThaSnap">
+                       
+                        <div class="InfWar2">
+                            <video class="video2" autoplay muted loop >
+                                <source src="videos/Thanos6stone.mp4" type="video/mp4">
+                            </video>
+                            <video class="video2" autoplay muted loop >
+                                <source src="videos/ThanosSnap.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="textInfWar">
+                            <h1 class="timeline-title">Thanos' Snap</h1>
+                            <p class="timeline-text">
+                            After a devastating attack by Thanos and his army, the Avengers abandon the lab as Wanda destroys the Mind Stone. Thanos rewinds time, seizes the Stone from Vision, and despite Thor’s attempt to stop him, snaps his fingers, erasing half the universe.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div>
+                    <hr>
+                    <div class="Prep">
+                        <div class="InfWar2">
+                            <img class="video1" src="pictures/Prep1.png">
+                            <img class="video1"src="pictures/Prep2.png">
+                        </div>
+                        <div class="textInfWar">
+                            <h1 class="timeline-title">Preparation for the final battle</h1>
+                            <p class="timeline-text">
+                            Over months of preparation, the scattered heroes coordinate across space and time. Bruce Banner combines his genius with the Hulk's power to create a device for time travel. They plan to retrieve the Infinity Stones from past timelines, facing risks, old rivalries, and inevitable sacrifices, while each hero confronts past mistakes and discovers newfound courage.
+                            </p>   
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <hr>
+                    <div class="FinalBattle">
+                        <div class="InfWar2">
+                            <video class="video3" autoplay muted loop >
+                                <source src="videos/EndgameSpawn2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="textInfWar">
+                            <h1 class="timeline-title">It all ends here</h1>
+                            <p class="timeline-text">The Final battle between the Avengers and Thanos begins. Will you join the Avengers in taking out Thanos to save the world?</p>
+                            <a href="game.html">
+                                <button class="joinButton">Join Now!</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Marvel Universe. All rights reserved. (fake) </p>
+            <p>Contact: info@marvel.com | Terms of Service | Privacy Policy (fake)</p>
+        </div>
+
+
+        <script>
+
+            //Preloader script
+            document.body.classList.add("loading");
+
+            const preloader = document.getElementById("preloader");
+            const video = document.getElementById("preloader-video");
+            
+            video.onended = () => {
+                preloader.classList.add("fade-out");
+                document.body.classList.remove("loading");
+            };
+
+        </script>
+    </body>
+</html>
