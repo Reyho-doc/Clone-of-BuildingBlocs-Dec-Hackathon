@@ -38,3 +38,6 @@ Many thanks to...
   - AI used to generate text for MainPage.html
   *AI generated code are all stated in the files as well*
 
+
+Additional info for Hosea:
+1st project, did in BuildingBlocs hackathon (Dec 2025, with GESS Foong Liang Jun)
